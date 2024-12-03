@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IceSpelll : MonoBehaviour
+public class IceSpelll : Spell
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        Cast();
+        Cast("Dark Elf");
+        Cast("Dark Elf", 40);
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Cast()
     {
-        
+        Debug.Log($"Casting a {name}!!! Blow the enemy!!!");
     }
 }

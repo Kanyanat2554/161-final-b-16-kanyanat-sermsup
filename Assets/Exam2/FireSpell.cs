@@ -2,17 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireSpell : MonoBehaviour
+public class FireSpell : Spell
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
+        base.Cast();
+    }
+
+    private void Start()
+    {
+        Cast();
+        Cast("Orc");
+        Cast("Orc", 15);
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Cast()
     {
-        
+        Debug.Log($"Casting a {name}!!! Destroy them all!!!");
     }
+
+    
+
+    
+
 }

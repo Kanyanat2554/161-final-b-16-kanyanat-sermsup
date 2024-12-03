@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Spell : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public virtual void Cast()
     {
-        
+        Debug.Log("Spell-Casting Game Started!!!");
+        Debug.Log("Casting a normal spell!");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Cast(string target)
     {
-        
+        Debug.Log($"Casting a spell on target: {target}");
     }
+
+    public void Cast(string target, int castLevel)
+    {
+        Debug.Log($"Casting a spell on target: {target} with power level: {castLevel}");
+    }
+
+   
 }
